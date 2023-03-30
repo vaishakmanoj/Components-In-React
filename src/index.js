@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import ListItem from './list/ListItem';
 import Header from './components/Header'
 import Footer from './components/Footer'
+import List from './list/List';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,12 +12,7 @@ root.render(
     <Header/>
     
     <div className='app-body'>
-      <div className='app-list'>
-       <ListItem/>
-       <ListItem/>
-       <ListItem/>
-       <ListItem/>
-      </div>
+      <List/>
       
     </div>
    
