@@ -4,18 +4,26 @@ import './ListItems.css';
 
 
 function ListItem(props) {
-    console.log(props);
+    
+    const{
+        title,
+        descr,
+        isActive
+    } = props;
+
     return(
       <div className='list-item'>
             <hr />
             <div className='list-title'>
-              <h4>{props.title}</h4>
+              <h4>{title}</h4>
             </div>
             <div className='list-descr'>
-                {props.descr}
+                {descr}
             </div>
             <div className='list-label'>
-              <Label isActive={props.isActive}/>
+              <Label onAction={()=>{
+                console.log('Parent Clicked');
+              }} isActive={isActive}/>
               
             </div>
             <hr />
